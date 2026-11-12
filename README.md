@@ -17,11 +17,11 @@ Every design choice is measured, not assumed.
 
 ## What makes it different
 
-| | Typical RAG tutorial | MgScholar |
+| | Typical RAG tutorial |  Scholar |
 |---|---|---|
 | Parsing | `PyPDF` text only | **Docling** layout model: reading order, sections, **tables as real rows/columns**, figures + captions |
 | Figures | ignored | **Vision-LLM figure descriptions** so plots become searchable |
-| Retrieval | one vector search | **Hybrid** dense + BM25 (exact chemistry tokens like `Mg(TFSI)2`) fused with RRF in **Qdrant** |
+| Retrieval | one vector search | **Hybrid** dense + BM25 (exact chemistry tokens like ` (TFSI)2`) fused with RRF in **Qdrant** |
 | Ranking | none | **Cross-encoder reranker** (`bge-reranker-v2-m3`) |
 | Hallucination control | "please don't hallucinate" | **3-layer abstention**: retrieval-score gate → model refusal token → citation verification |
 | Citations | maybe | Every sentence cites `[S#]` → paper, page, text/table/figure, DOI; invalid citations caught |
@@ -71,29 +71,29 @@ Golden set: N questions (text / table / figure / unanswerable), written from N p
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/mg-battery-rag && cd mg-battery-rag
+git clone https://github.com/<you>/ -battery-rag && cd  -battery-rag
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -e ".[dev,eval]"
 cp .env.example .env                                   # choose your LLM
 
 # Zotero 7 → Settings → Advanced → tick "Allow other applications on this computer to communicate with Zotero"
-python -m mgrag.cli list  --zotero "Mg battery"        # or: --folder ~/papers
-python -m mgrag.cli parse --zotero "Mg battery"
-python -m mgrag.cli describe-figures                   # optional, needs a vision model
-python -m mgrag.cli index
-python -m mgrag.cli ask "Which electrolytes give Mg plating CE above 99%?"
+python -m  rag.cli list  --zotero "  battery"        # or: --folder ~/papers
+python -m  rag.cli parse --zotero "  battery"
+python -m  rag.cli describe-figures                   # optional, needs a vision model
+python -m  rag.cli index
+python -m  rag.cli ask "Which electrolytes give   plating CE above 99%?"
 streamlit run app/streamlit_app.py
 ```
 
 Research features:
 ```bash
-python -m mgrag.cli extract                                   # build the property database
-python -m mgrag.cli sql "top 5 cathodes by specific capacity" # numeric question → SQL
-python -m mgrag.cli spreads --explain                         # where papers disagree, and why
-python -m mgrag.cli gaps                                      # coverage map + research gaps
+python -m  rag.cli extract                                   # build the property database
+python -m  rag.cli sql "top 5 cathodes by specific capacity" # numeric question → SQL
+python -m  rag.cli spreads --explain                         # where papers disagree, and why
+python -m  rag.cli gaps                                      # coverage map + research gaps
 ```
 
-Extras: `python -m mgrag.mcp_server` (agent tools: ask, search, query_measurements, where_papers_disagree) ·
+Extras: `python -m  rag.mcp_server` (agent tools: ask, search, query_measurements, where_papers_disagree) ·
 `python eval/run_eval.py --ablation` · `docker compose up -d` (Qdrant server).
 
 ## Design decisions (and what I measured)
