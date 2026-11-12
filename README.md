@@ -1,6 +1,6 @@
 # 🔋  Postdoc— a research copilot for battery literature
 
-MgScholar turns your Zotero library of Mg-battery papers into three tools:
+scholar turns your Zotero library of battery papers into three tools:
 
 - **Ask** — answers with page-level citations to text, tables and figures, or an honest *"not in your library"*.
 - **Compare** — the literature as a database: rank capacities or efficiencies across papers in normalized units,
