@@ -1,4 +1,4 @@
-# 🔋 MgScholar — a research copilot for magnesium-battery literature
+# 🔋  Postdoc— a research copilot for battery literature
 
 MgScholar turns your Zotero library of Mg-battery papers into three tools:
 
