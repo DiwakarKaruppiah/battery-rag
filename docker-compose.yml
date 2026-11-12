@@ -1,0 +1,9 @@
+# Optional: Qdrant as a real server (dashboard at http://localhost:6333/dashboard).
+# Then set QDRANT_URL=http://localhost:6333 in .env and re-run `python -m mgrag.cli index`.
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./data/qdrant_server:/qdrant/storage

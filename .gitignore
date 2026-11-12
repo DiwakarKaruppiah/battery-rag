@@ -1,0 +1,19 @@
+# Never publish the papers or text extracted from them (copyright) — or your keys
+data/
+*.pdf
+.env
+
+# eval outputs contain extracted text; commit only the summary report
+eval/results/*
+!eval/results/report.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store

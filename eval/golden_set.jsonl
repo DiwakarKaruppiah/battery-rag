@@ -1,0 +1,16 @@
+// One JSON object per line. YOU are the domain expert: write each "reference" from your own papers,
+// and put the paper_id(s) (see `python -m mgrag.cli list`) that contain the answer in "relevant_papers".
+// Aim for 25-30 questions: ~20 answerable (mix text / table / figure questions) + 5-8 unanswerable.
+{"id": "q01", "question": "Why do conventional carbonate electrolytes passivate Mg metal anodes?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "text"}
+{"id": "q02", "question": "Which electrolyte compositions in my library report Mg plating/stripping Coulombic efficiency above 99%?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "table"}
+{"id": "q03", "question": "What specific capacity and cycle life were reported for Chevrel-phase Mo6S8 cathodes, and at what current density?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "table"}
+{"id": "q04", "question": "What is the anodic stability window of Mg(TFSI)2/MgCl2 in DME?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "text"}
+{"id": "q05", "question": "How does the overpotential for Mg deposition change with cycling in the voltage profiles shown?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "figure"}
+{"id": "q06", "question": "What strategies are proposed to build an artificial interphase on Mg metal?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "text"}
+{"id": "q07", "question": "Why is Mg2+ diffusion slow in oxide cathode hosts, and how do authors mitigate it?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "text"}
+{"id": "q08", "question": "Which papers compare chloride-containing and chloride-free electrolytes, and what corrosion issues do they report for current collectors?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "text"}
+{"id": "q09", "question": "Rank the cathode materials in my library by reported specific capacity.", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "numeric"}
+{"id": "q10", "question": "Which electrolytes have reported anodic stability above 3 V vs Mg/Mg2+?", "reference": "TODO", "relevant_papers": [], "answerable": true, "kind": "numeric"}
+{"id": "u01", "question": "What is the energy density of the Tesla 4680 lithium-ion cell?", "reference": "", "relevant_papers": [], "answerable": false, "kind": "out_of_scope"}
+{"id": "u02", "question": "What Coulombic efficiency did my library report for Mg anodes in a 10 M aqueous water-in-salt electrolyte at 80 °C?", "reference": "", "relevant_papers": [], "answerable": false, "kind": "plausible_but_absent"}
+{"id": "u03", "question": "Which sodium-ion layered oxide cathode has the highest capacity?", "reference": "", "relevant_papers": [], "answerable": false, "kind": "adjacent_domain"}
