@@ -19,13 +19,15 @@ def make_converter(ocr: bool = False):
     from docling.datamodel.base_models import InputFormat
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import DocumentConverter, PdfFormatOption
+    from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 
     opts = PdfPipelineOptions()
     opts.do_ocr = ocr                     # journal PDFs are born-digital; turn on for scans
     opts.do_table_structure = True        # TableFormer model → real rows/columns
     opts.generate_picture_images = True   # keep figure bitmaps so we can show / describe them
     opts.images_scale = 2.0
-    return DocumentConverter(format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=opts)})
+    return DocumentConverter(format_options={InputFormat.PDF: PdfFormatOption(
+        pipeline_options=opts, backend=PyPdfiumDocumentBackend)})
 
 
 def make_chunker():

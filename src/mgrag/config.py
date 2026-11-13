@@ -26,6 +26,7 @@ class Settings:
     # Vector store: embedded Qdrant on disk by default; set QDRANT_URL to use a server
     qdrant_url: str | None = _env("QDRANT_URL", None)
     collection: str = _env("QDRANT_COLLECTION", "mg_battery")
+    domain: str = _env("DOMAIN", "magnesium-battery")
 
     # Models (all run on CPU; see README for GPU upgrades)
     dense_model: str = _env("DENSE_MODEL", "BAAI/bge-small-en-v1.5")

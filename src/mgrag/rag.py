@@ -10,7 +10,7 @@ from .config import settings
 
 ABSTAIN_TOKEN = "INSUFFICIENT_EVIDENCE"
 
-SYSTEM_PROMPT = f"""You are MgScholar, a research assistant for magnesium-battery literature.
+SYSTEM_PROMPT = f"""You are a research assistant for {settings.domain} literature.
 Rules:
 1. Use ONLY the numbered sources provided. No outside knowledge.
 2. End every factual sentence with its citation(s), e.g. [S2] or [S1][S3].
