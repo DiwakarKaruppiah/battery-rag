@@ -16,10 +16,10 @@ MAX_TABLE_CHARS = 6000
 
 
 def make_converter(ocr: bool = False):
+    from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
     from docling.datamodel.base_models import InputFormat
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import DocumentConverter, PdfFormatOption
-    from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 
     opts = PdfPipelineOptions()
     opts.do_ocr = ocr                     # journal PDFs are born-digital; turn on for scans
